@@ -16,6 +16,8 @@ AI Prompt Design
 
 Tech Stack
 
+Authentication & Security
+
 Deployment
 
 Usage
@@ -115,6 +117,46 @@ Database: MongoDB
 AI: OpenAI API / Custom AI Logic
 
 Deployment: Vercel (frontend), Render (backend)
+
+Authentication & Security
+
+The application implements JWT (JSON Web Token) based authentication to secure API access and protect user-specific operations.
+
+Authentication Flow
+
+A user signs up or logs in through the frontend.
+
+The backend validates the credentials.
+
+Upon successful authentication, the server generates a JWT token.
+
+The token is returned to the frontend and stored securely in the client.
+
+For subsequent requests, the frontend sends the token in the request headers.
+
+The backend verifies the token before granting access to protected routes.
+
+Example Request Header
+Authorization: Bearer <JWT_TOKEN>
+Protected Routes
+
+Certain API routes require authentication to ensure only authorized users can access them, such as:
+
+AI module interactions
+
+Order status queries
+
+Proposal generation
+
+AI support conversations
+
+Benefits
+
+Ensures secure communication between frontend and backend
+
+Protects sensitive operations and data
+
+Allows scalable session management without server-side session storage
 
 Deployment
 
