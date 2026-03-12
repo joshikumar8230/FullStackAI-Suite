@@ -18,7 +18,7 @@ useEffect(()=>{
       const token = sessionStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/auto-category/products",
+        "https://fullstackai-suite.onrender.com/products",
         {
           headers:{
             Authorization:`Bearer ${token}`

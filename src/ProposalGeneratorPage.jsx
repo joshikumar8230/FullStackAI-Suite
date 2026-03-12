@@ -23,7 +23,7 @@ function ProposalGeneratorPage() {
       const token = sessionStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:5000/b2b-proposal",
+        "https://fullstackai-suite.onrender.com/b2b-proposal",
         { request: input },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -59,7 +59,7 @@ function ProposalGeneratorPage() {
       const token = sessionStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/create-order",
+        "https://fullstackai-suite.onrender.com/create-order",
         { proposal: lastProposal },
         { headers: { Authorization: `Bearer ${token}` } }
       );

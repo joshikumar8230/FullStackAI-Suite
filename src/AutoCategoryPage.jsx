@@ -26,7 +26,7 @@ function AutoCategoryPage() {
       const token = sessionStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:5000/auto-category",
+        "https://fullstackai-suite.onrender.com/auto-category",
         { description: input },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -63,7 +63,7 @@ function AutoCategoryPage() {
     try {
       const token = sessionStorage.getItem("token");
 
-      await axios.post("http://localhost:5000/auto-category/save", aiResult, {
+      await axios.post("https://fullstackai-suite.onrender.com/save", aiResult, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

@@ -18,7 +18,7 @@ function SupportBotPage() {
       const token = sessionStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:5000/support-chat",
+        "https://fullstackai-suite.onrender.com/support-chat",
         { message },
         {
           headers: { Authorization: `Bearer ${token}` },
