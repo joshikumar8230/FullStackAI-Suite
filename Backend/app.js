@@ -15,7 +15,7 @@ app.use(cors({
 
 // Initialize Groq client 
 const client = new OpenAI({
-  apiKey: "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",
+  apiKey: "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",
   baseURL: "https://api.groq.com/openai/v1"
 });
 const JWT_SECRET = "OpenAi";
